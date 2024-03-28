@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Information Display System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{% block h1 %} Flight Information Display System{% endblock%}</h1>
+        <h2>{% block h2%}DOMESTIC DEPARTURES {% endblock%}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Number</th>
+                    <th>Destination</th>
+                    <th>Gate</th>
+                    <th>Status</th>
+                    <th>Departure Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{%block airline_1 %} {%endblock%}</td>
+                    <td>{%block destination_1 %} {%endblock%}</td>
+                    <td>{%block boarding_gate_1 %} {%endblock%}</td>
+                    <td>{%block status_1 %} {%endblock%}</td>
+                    <td>{%block Time_1 %} {%endblock%}</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_2 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_3 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_4 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_5 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_6 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_7 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_8 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_9 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_10 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                <tr>
+                    <td>{%block airline_11 %} {%endblock%}</td>
+                    <td>New York</td>
+                    <td>Gate 5</td>
+                    <td>On Time</td>
+                    <td>12:00 PM</td>
+                </tr>
+                
+                <!-- Add more rows for additional flights -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

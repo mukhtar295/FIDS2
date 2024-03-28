@@ -6,13 +6,13 @@ from .models import Airport, Airline, Flight
 class HomePage(ListView):
     
     http_method_names = ["get"]
-    template_name = "homepage.html"
+    template_name = "feed/homepage.html"
     model = Airport
 
     context_object_name = "airports"
-    queryset = Airport.objects.all().order_by('-id')[0:30]
+    #queryset = Airport.objects.all().order_by('-id')[0:30]
 
-    '''
+    
     def get_queryset(self):
         # Return a queryset of Airport objects
         return Airport.objects.all()
@@ -23,5 +23,5 @@ class HomePage(ListView):
         context['flights'] = Flight.objects.all()    # Add queryset of Flight objects
         return context
 
-    '''
+    
 
