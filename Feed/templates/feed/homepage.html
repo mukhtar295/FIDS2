@@ -1,7 +1,7 @@
 {% extends "base.html"%}
 
-{%block airline_1%}  {%endblock%}
+{%block airline_1%}{{airlines.0.code}}  {{flights.0.flight_number}} {%endblock%}
 {%block destination_1 %}{{airports.0.name}}{%endblock%}
-{%block boarding_gate_1 %}13 {%endblock%}
+{%block boarding_gate_1 %}{{flights.0.departure_gate}} {%endblock%}
 {%block status_1 %} ON TIME{%endblock%}
 {%block Time_1 %} 13:00{%endblock%}
