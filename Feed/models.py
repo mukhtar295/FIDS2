@@ -24,6 +24,7 @@ class Flight(models.Model):
     departure_time = models.DateTimeField()
     arrival_time = models.DateTimeField()
     departure_gate = models.CharField(max_length = 10, default = '01')
+    departure_status = models.CharField(max_length = 10, default = 'ON TIME')
 
     def __str__(self):
         return f"{self.airline} - {self.flight_number}"

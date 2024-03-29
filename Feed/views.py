@@ -7,9 +7,9 @@ class HomePage(ListView):
     
     http_method_names = ["get"]
     template_name = "feed/homepage.html"
-    model = Airport
+    model = Flight
 
-    context_object_name = "airports"
+    context_object_name = "flights"
     #queryset = Airport.objects.all().order_by('-id')[0:30]
 
     

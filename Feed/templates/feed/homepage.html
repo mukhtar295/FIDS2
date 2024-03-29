@@ -1,7 +1,21 @@
 {% extends "base.html"%}
 
-{%block airline_1%}{{airlines.0.code}}  {{flights.0.flight_number}} {%endblock%}
+<!--{%block airline_1%}{{airlines.0.code}}  {{flights.0.flight_number}} {%endblock%}
 {%block destination_1 %}{{airports.0.name}}{%endblock%}
 {%block boarding_gate_1 %}{{flights.0.departure_gate}} {%endblock%}
 {%block status_1 %} ON TIME{%endblock%}
-{%block Time_1 %} 13:00{%endblock%}
+{%block Time_1 %} 13:00{%endblock%} -->
+
+{% for flight in flights %}
+    {{ forloop.counter }}:
+    {%block airline_{{counter}}%}{{airlines.code}}  {{flights.flight_number}} {%endblock%}
+    <!--Airline: {{ flight.airline.code }}-->
+    {%block destination_{{counter}} %}{{airports.name}}{%endblock%}
+    
+    {%block boarding_gate_{{counter}} %}{{flights.departure_gate}} {%endblock%}
+    {%block status_{{counter}}%} ON TIME{%endblock%}
+    {%block Time_{{counter}}%} 13:00{%endblock%}
+    
+{% endfor %}
+
+
